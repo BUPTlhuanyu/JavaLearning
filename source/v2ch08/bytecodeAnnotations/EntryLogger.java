@@ -52,11 +52,11 @@ public class EntryLogger extends ClassVisitor
             {
                visitLdcInsn(loggerName);
                visitMethodInsn(INVOKESTATIC, "java/util/logging/Logger", "getLogger", 
-                  "(Ljava/lang/String;)Ljava/util/logging/Logger;", false);
+                  "(Ljava/lang/MyString;)Ljava/util/logging/Logger;", false);
                visitLdcInsn(className);
                visitLdcInsn(methodName);
                visitMethodInsn(INVOKEVIRTUAL, "java/util/logging/Logger", "entering", 
-                  "(Ljava/lang/String;Ljava/lang/String;)V", false);
+                  "(Ljava/lang/MyString;Ljava/lang/MyString;)V", false);
                loggerName = null;
             }                  
          }

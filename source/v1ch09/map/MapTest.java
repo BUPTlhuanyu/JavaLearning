@@ -3,7 +3,7 @@ package map;
 import java.util.*;
 
 /**
- * This program demonstrates the use of a map with key type String and value type Employee.
+ * This program demonstrates the use of a map with key type MyString and value type Employee.
  * @version 1.12 2015-06-21
  * @author Cay Horstmann
  */

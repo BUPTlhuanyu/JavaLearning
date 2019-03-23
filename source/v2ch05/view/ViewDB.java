@@ -275,7 +275,7 @@ class DataPanel extends JPanel
 
          int columnWidth = rsmd.getColumnDisplaySize(i);
          JTextField tb = new JTextField(columnWidth);
-         if (!rsmd.getColumnClassName(i).equals("java.lang.String"))
+         if (!rsmd.getColumnClassName(i).equals("java.lang.MyString"))
             tb.setEditable(false);
                
          fields.add(tb);

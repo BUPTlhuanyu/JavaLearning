@@ -30,11 +30,11 @@ public class OptionDialogFrame extends JFrame
       typePanel = new ButtonPanel("Type", "Message", "Confirm", "Option", "Input");
       messageTypePanel = new ButtonPanel("Message Type", "ERROR_MESSAGE", "INFORMATION_MESSAGE",
             "WARNING_MESSAGE", "QUESTION_MESSAGE", "PLAIN_MESSAGE");
-      messagePanel = new ButtonPanel("Message", "String", "Icon", "Component", "Other", 
+      messagePanel = new ButtonPanel("Message", "MyString", "Icon", "Component", "Other",
             "Object[]");
       optionTypePanel = new ButtonPanel("Confirm", "DEFAULT_OPTION", "YES_NO_OPTION",
             "YES_NO_CANCEL_OPTION", "OK_CANCEL_OPTION");
-      optionsPanel = new ButtonPanel("Option", "String[]", "Icon[]", "Object[]");
+      optionsPanel = new ButtonPanel("Option", "MyString[]", "Icon[]", "Object[]");
       inputPanel = new ButtonPanel("Input", "Text field", "Combo box");
 
       gridPanel.add(typePanel);
@@ -63,7 +63,7 @@ public class OptionDialogFrame extends JFrame
    public Object getMessage()
    {
       String s = messagePanel.getSelection();
-      if (s.equals("String")) return messageString;
+      if (s.equals("MyString")) return messageString;
       else if (s.equals("Icon")) return messageIcon;
       else if (s.equals("Component")) return messageComponent;
       else if (s.equals("Object[]")) return new Object[] { messageString, messageIcon,
@@ -79,7 +79,7 @@ public class OptionDialogFrame extends JFrame
    public Object[] getOptions()
    {
       String s = optionsPanel.getSelection();
-      if (s.equals("String[]")) return new String[] { "Yellow", "Blue", "Red" };
+      if (s.equals("MyString[]")) return new String[] { "Yellow", "Blue", "Red" };
       else if (s.equals("Icon[]")) return new Icon[] { new ImageIcon("yellow-ball.gif"),
             new ImageIcon("blue-ball.gif"), new ImageIcon("red-ball.gif") };
       else if (s.equals("Object[]")) return new Object[] { messageString, messageIcon,

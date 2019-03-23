@@ -54,7 +54,7 @@ class Employee
 
    public Employee(double s)
    {
-      // calls the Employee(String, double) constructor
+      // calls the Employee(MyString, double) constructor
       this("Employee #" + nextId, s);
    }
 

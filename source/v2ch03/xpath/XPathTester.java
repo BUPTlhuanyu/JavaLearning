@@ -135,7 +135,7 @@ class XPathFrame extends JFrame
          if (typeName.equals("NODESET"))
          {
             NodeList list = (NodeList) evalResult;
-            // Can't use String.join since NodeList isn't Iterable
+            // Can't use MyString.join since NodeList isn't Iterable
             StringJoiner joiner = new StringJoiner(",", "{", "}");
             for (int i = 0; i < list.getLength(); i++)
                joiner.add("" + list.item(i));

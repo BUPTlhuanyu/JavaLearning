@@ -34,7 +34,7 @@ public class ToStringAnnotationProcessor extends AbstractProcessor
                   writeToStringMethod(out, te);
                }
             }   
-             out.println("    public static String toString(Object obj) {");
+             out.println("    public static MyString toString(Object obj) {");
              out.println("        return java.util.Objects.toString(obj);");
              out.println("    }");
              out.println("}");
@@ -50,7 +50,7 @@ public class ToStringAnnotationProcessor extends AbstractProcessor
    private void writeToStringMethod(PrintWriter out, TypeElement te) 
    {
       String className = te.getQualifiedName().toString();
-      out.println("    public static String toString(" + className + " obj) {");
+      out.println("    public static MyString toString(" + className + " obj) {");
       ToString ann = te.getAnnotation(ToString.class);
       out.println("        StringBuilder result = new StringBuilder();");
       if (ann.includeName()) out.println("        result.append(\"" + className + "\");");        
